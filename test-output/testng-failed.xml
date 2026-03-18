@@ -5,7 +5,7 @@
     <classes>
       <class name="TestPages.PracticeTestPage">
         <methods>
-          <include name="isLoginTestPagePresent"/>
+          <include name="clickOnLoginTestPage"/>
           <include name="quit"/>
           <include name="setUp"/>
         </methods>

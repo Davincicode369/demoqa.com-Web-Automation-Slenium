@@ -21,8 +21,11 @@ public class BaseClass {
 	protected Properties prop;
 	protected utilities util;
 	
-	String bseUrl= frameWorkConstant.BaseUrl;
+	
+	
 	String propertyFile = frameWorkConstant.proeprtyFile;
+	String baseUrl = utilities.getPropertyValue("baseurl");
+	
 
 	
 	public BaseClass() {
@@ -34,7 +37,7 @@ public class BaseClass {
 			e.printStackTrace();
 		}
 		catch (IOException e) {
-			e.printStackTrace();
+			e.printStackTrace();  
 		}
 	}
 	
@@ -45,7 +48,7 @@ public class BaseClass {
 	public void initialize() {
 		WebDriverManager.chromedriver().setup();
        driver.set(new ChromeDriver());
-       getDriver().get(bseUrl);
+       getDriver().get(baseUrl);
        getDriver().manage().window().maximize();
        getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
        getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));

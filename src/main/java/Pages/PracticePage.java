@@ -9,24 +9,24 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class PracticePage {
-	private  WebDriver driver;
-	private   WebDriverWait wait;
+	  WebDriver driver;
+	  WebDriverWait wait;
 	
 	
-	private By TestLoginPage = By.xpath("//div//p//a[contains(text(),'Login')]");
+	private By testLoginPage = By.linkText("Test Login Page");
 	
 	public PracticePage(WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 	}
 	
-	public void isTesLoginPagePresent() {
-		 wait.until(ExpectedConditions.visibilityOfElementLocated(TestLoginPage)).isDisplayed();
+	public boolean isTesLoginPagePresent() {
+		 return wait.until(ExpectedConditions.visibilityOfElementLocated(testLoginPage)).isDisplayed();
 	}
 	
 	public void clickOnTestLOgin() {
-		WebElement testLogin = driver.findElement(TestLoginPage);
-		testLogin.click();
+        wait.until(ExpectedConditions.elementToBeClickable(testLoginPage)).click();
+		
 	}
 	
 	

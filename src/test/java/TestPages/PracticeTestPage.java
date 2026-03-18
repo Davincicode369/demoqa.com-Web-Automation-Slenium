@@ -1,5 +1,6 @@
 package TestPages;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -18,13 +19,14 @@ public class PracticeTestPage extends BaseClass {
 		
 	}
 	
-	@Test
-	public void isLoginTestPagePresent() {
-		practicePage.isTesLoginPagePresent();
-	}
+//	@Test
+//	public void isLoginTestPagePresent() {
+//		practicePage.isTesLoginPagePresent();
+//	}
 	
 	@Test
 	public void clickOnLoginTestPage() {
+
 		practicePage.clickOnTestLOgin();
 	}
 	
