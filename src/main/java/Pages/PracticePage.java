@@ -26,6 +26,7 @@ public class PracticePage {
 	
 	public void clickOnTestLOgin() {
         wait.until(ExpectedConditions.elementToBeClickable(testLoginPage)).click();
+        
 		
 	}
 	

@@ -5,6 +5,7 @@
     <classes>
       <class name="TestPages.LoginTestPage">
         <methods>
+          <include name="verifyInvallidLogin" invocation-numbers="0 1 2 3"/>
           <include name="verifyValidLogin" invocation-numbers="0"/>
           <include name="openLoginPage"/>
           <include name="setup"/>

@@ -10,12 +10,14 @@ import Pages.PracticePage;
 import Pages.loginPage;
 import TestData.LoginTestdata;
 import baseClass.BaseClass;
+import utility.utilities;
 
 public class LoginTestPage extends BaseClass {
 
     PracticePage practicepage;
     loginPage loginpage;
-
+    PracticeTestPage practiceTestPage;
+    
     @BeforeClass
     public void setup() {
         initialize();
@@ -24,7 +26,8 @@ public class LoginTestPage extends BaseClass {
 
     @BeforeMethod
     public void openLoginPage() {
-        getDriver().get("https://practicetestautomation.com/practice-test-login/");
+        String loginUrl = utilities.getPropertyValue("loginUrl");
+        getDriver().get(loginUrl);
     }
 
     @Test(dataProvider = "Invalidlogindata", dataProviderClass = LoginTestdata.class)

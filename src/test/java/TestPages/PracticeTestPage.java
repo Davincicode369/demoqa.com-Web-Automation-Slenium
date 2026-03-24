@@ -11,6 +11,7 @@ import baseClass.BaseClass;
 
 public class PracticeTestPage extends BaseClass {
 	PracticePage practicePage;
+	String loginUrl ;
 	
 	@BeforeClass
 	public void setUp() {
@@ -28,7 +29,14 @@ public class PracticeTestPage extends BaseClass {
 	public void clickOnLoginTestPage() {
 
 		practicePage.clickOnTestLOgin();
+		
 	}
+	
+	public String getLoginUrl() {
+		return loginUrl = getDriver().getCurrentUrl();
+	   
+	}
+	
 	
 	@AfterClass
 public void quit() {
