@@ -26,7 +26,7 @@ public class utilities {
 	public static String getPropertyValue(String property) {
 		Properties prop = new Properties();
 		try {
-			FileInputStream ip = new FileInputStream(frameWorkConstant.configfilePath);
+			FileInputStream ip = new FileInputStream(frameWorkConstant.configFilePath);
 			prop.load(ip);
 		} catch (IOException e) {
 			e.printStackTrace();

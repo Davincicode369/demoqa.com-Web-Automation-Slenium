@@ -23,30 +23,16 @@ public class BaseClass {
 	
 	
 	
-	String propertyFile = frameWorkConstant.proeprtyFile;
-	String baseUrl = utilities.getPropertyValue("baseurl");
+	String propertyFile = frameWorkConstant.configFilePath;
+	String baseUrl = utilities.getPropertyValue("baseUrl");
 	
-
-	
-	public BaseClass() {
-		prop = new Properties();
-		try {
-			FileInputStream ip = new FileInputStream(propertyFile);
-			prop.load(ip);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		catch (IOException e) {
-			e.printStackTrace();  
-		}
-	}
 	
 	public static WebDriver getDriver() {
 	    return driver.get();
 	}
 	
 	public void initialize() {
-		WebDriverManager.chromedriver().setup();
+	   WebDriverManager.chromedriver().setup();
        driver.set(new ChromeDriver());
        getDriver().get(baseUrl);
        getDriver().manage().window().maximize();
@@ -58,6 +44,7 @@ public class BaseClass {
 	public void quit() {
 		if(getDriver()!=null) {
 			getDriver().quit();
+			driver.remove();
 		}
 	}
 

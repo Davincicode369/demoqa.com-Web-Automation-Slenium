@@ -32,8 +32,7 @@ public class PracticeTestPage extends BaseClass {
 	
 	@AfterClass
 public void quit() {
-	if(getDriver()!=null) {
-		getDriver().quit();
+	getDriver().quit();
 	}
 }
-}
+
