@@ -6,6 +6,7 @@
             <class name="TestPages.PracticeTestPage"/>
             <class name="TestPages.LoginTestPage">
                 <methods>
+                
                     <include name="verifyInvallidLogin"/>
                     <include name="verifyValidLogin"/>
                 </methods>
