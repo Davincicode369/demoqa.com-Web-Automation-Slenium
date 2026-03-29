@@ -2,6 +2,7 @@ package TestPages;
 
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -18,17 +19,16 @@ public class LoginTestPage extends BaseClass {
     loginPage loginpage;
     PracticeTestPage practiceTestPage;
     
-    @BeforeClass
+    @BeforeMethod
     public void setup() {
         initialize();
         loginpage = new loginPage(getDriver());
-    }
-
-    @BeforeMethod
-    public void openLoginPage() {
+        
         String loginUrl = utilities.getPropertyValue("loginUrl");
         getDriver().get(loginUrl);
     }
+
+   
 
     @Test(dataProvider = "Invalidlogindata", dataProviderClass = LoginTestdata.class)
     public void verifyInvallidLogin(String username, String password) {
@@ -49,7 +49,7 @@ public class LoginTestPage extends BaseClass {
         Assert.assertTrue(loginpage.visibilityofLogoutBtn(), "Logout button not displayed");
     }
 
-    @AfterClass
+    @AfterMethod
     public void teardown() {
         quit();
     }

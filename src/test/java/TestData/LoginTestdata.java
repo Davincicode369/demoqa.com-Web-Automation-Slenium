@@ -1,6 +1,11 @@
 package TestData;
 
+import java.io.IOException;
+
 import org.testng.annotations.DataProvider;
+
+import FrameWorkConstant.frameWorkConstant;
+import utility.utilities;
 
 public class LoginTestdata {
 
@@ -19,6 +24,12 @@ public Object[][] getValidLogindata(){
 	return new Object[][] {
 		{"student","Password123"}
 	};
+}	
+
+@DataProvider(name="getExcelData")
+public Object[][]exceldata() throws IOException{
+	String filepath = frameWorkConstant.ExcelFilePath;
+	return utilities.getExcedata(filepath, "LoginData");
 }
 	
 }

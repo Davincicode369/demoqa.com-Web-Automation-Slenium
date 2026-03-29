@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Automation Test" parallel="methods" thread-count="2">
+<test name="Automaion test">
+<classes>
+<class name="TestPages.PracticeTestPage"/>
+<class name="TestPages.LoginTestPage"/>
+</classes>
+</test>
+</suite>
