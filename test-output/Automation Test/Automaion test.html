@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Automaion test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>5/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Mar 29 06:46:40 IST 2026</td>
+<td>Started on:</td><td>Sun Mar 29 09:33:36 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>29 seconds (29739 ms)</td>
+<tr><td>Total time:</td><td>209 seconds (209791 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,14 +76,87 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='TestPages.LoginTestPage.verifyInvallidLogin()'><b>verifyInvallidLogin</b><br>Test class: TestPages.LoginTestPage<br>Parameters: wrongcred, Password123</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2849284db1b6395a014246374a433490, isElementDisplayed {id=f.2FAB3F7151394497B8954F0EC736A503.d.EF6EDF55CEA7735A793BE24B404E42FE.e.35}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\indra\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57799}, goog:processID: 22532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57799/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2849284db1b6395a014246374a433490)] -&gt; xpath: //div//div[@id=&apos;error&apos;]]
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:428)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:220)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at Pages.loginPage.errorMessage(loginPage.java:44)
+	at TestPages.LoginTestPage.verifyInvallidLogin(LoginTestPage.java:39)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2874)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	... 3 more
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1837287458", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1837287458'><pre>org.openqa.selenium.TimeoutException: java.util.concurrent.TimeoutException
+Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2849284db1b6395a014246374a433490, isElementDisplayed {id=f.2FAB3F7151394497B8954F0EC736A503.d.EF6EDF55CEA7735A793BE24B404E42FE.e.35}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\indra\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57799}, goog:processID: 22532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57799/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2849284db1b6395a014246374a433490)] -&gt; xpath: //div//div[@id=&apos;error&apos;]]
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:428)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:220)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
+	at Pages.loginPage.errorMessage(loginPage.java:44)
+	at TestPages.LoginTestPage.verifyInvallidLogin(LoginTestPage.java:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:697)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:1005)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.testng.internal.thread.graph.TestNGFutureTask.run(TestNGFutureTask.java:22)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture$Timeout.run(CompletableFuture.java:2874)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	... 3 more
+</pre></div></td>
+<td>186</td>
+<td>TestPages.LoginTestPage@1a677343</td></tr>
+<tr>
 <td title='TestPages.LoginTestPage.verifyValidLogin()'><b>verifyValidLogin</b><br>Test class: TestPages.LoginTestPage<br>Parameters: student, Password123</td>
 <td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div//h1[contains (text(),&apos;Logged In Successfully&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div//h1[contains (text(),&apos;Logged In Successfully&apos;)]&quot;}.
 (tried for 5 seconds with 500 milliseconds interval)
 Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\indra\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56210}, goog:processID: 20652, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56210/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 88a80ac2fed428feec4834c136938447
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\indra\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57799}, goog:processID: 22532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57799/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2849284db1b6395a014246374a433490
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
 	at Pages.loginPage.VisibilityLoginSuccefull(loginPage.java:40)
@@ -93,14 +166,14 @@ Session ID: 88a80ac2fed428feec4834c136938447
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1947950516", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1947950516'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div//h1[contains (text(),&apos;Logged In Successfully&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div//h1[contains (text(),&apos;Logged In Successfully&apos;)]&quot;}.
+... Removed 13 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1780317854", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1780317854'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element found by By.xpath: //div//h1[contains (text(),&apos;Logged In Successfully&apos;)], but... org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div//h1[contains (text(),&apos;Logged In Successfully&apos;)]&quot;}.
 (tried for 5 seconds with 500 milliseconds interval)
 Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\indra\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56210}, goog:processID: 20652, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56210/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 88a80ac2fed428feec4834c136938447
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\indra\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57799}, goog:processID: 22532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57799/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2849284db1b6395a014246374a433490
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
 	at Pages.loginPage.VisibilityLoginSuccefull(loginPage.java:40)
@@ -125,7 +198,7 @@ Session ID: 88a80ac2fed428feec4834c136938447
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
 <td>6</td>
-<td>TestPages.LoginTestPage@37ceb1df</td></tr>
+<td>TestPages.LoginTestPage@1a677343</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -136,30 +209,20 @@ Session ID: 88a80ac2fed428feec4834c136938447
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestPages.LoginTestPage.verifyInvallidLogin()'><b>verifyInvallidLogin</b><br>Test class: TestPages.LoginTestPage<br>Parameters: student, wrongpasscred</td>
-<td></td>
-<td>6</td>
-<td>TestPages.LoginTestPage@37ceb1df</td></tr>
-<tr>
 <td title='TestPages.LoginTestPage.verifyInvallidLogin()'><b>verifyInvallidLogin</b><br>Test class: TestPages.LoginTestPage<br>Parameters: wronguser, Password123</td>
 <td></td>
 <td>0</td>
-<td>TestPages.LoginTestPage@37ceb1df</td></tr>
+<td>TestPages.LoginTestPage@1a677343</td></tr>
 <tr>
 <td title='TestPages.LoginTestPage.verifyInvallidLogin()'><b>verifyInvallidLogin</b><br>Test class: TestPages.LoginTestPage<br>Parameters: , </td>
 <td></td>
 <td>0</td>
-<td>TestPages.LoginTestPage@37ceb1df</td></tr>
+<td>TestPages.LoginTestPage@1a677343</td></tr>
 <tr>
-<td title='TestPages.LoginTestPage.verifyInvallidLogin()'><b>verifyInvallidLogin</b><br>Test class: TestPages.LoginTestPage<br>Parameters: wrongcred, Password123</td>
-<td></td>
-<td>1</td>
-<td>TestPages.LoginTestPage@37ceb1df</td></tr>
-<tr>
-<td title='TestPages.PracticeTestPage.clickOnLoginTestPage()'><b>clickOnLoginTestPage</b><br>Test class: TestPages.PracticeTestPage</td>
+<td title='TestPages.LoginTestPage.verifyInvallidLogin()'><b>verifyInvallidLogin</b><br>Test class: TestPages.LoginTestPage<br>Parameters: student, wrongpasscred</td>
 <td></td>
 <td>0</td>
-<td>TestPages.PracticeTestPage@131ef10</td></tr>
+<td>TestPages.LoginTestPage@1a677343</td></tr>
 </table><p>
 </body>
 </html>
