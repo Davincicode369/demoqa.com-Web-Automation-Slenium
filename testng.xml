@@ -1,13 +1,23 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Automation Test" parallel="false">
-    <test name="Automation test">
+<suite name="Automation Test" parallel="classes" thread-count="2">
+
+    <test name="Practice and Login Tests">
         <classes>
-        <class name="TestPages.PracticeTestPage">
+
+            <class name="TestPages.PracticeTestPage">
+                <methods>
+                    <include name="clickOnLoginTestPage"/>
+                </methods>
+            </class>
+
             <class name="TestPages.LoginTestPage">
                 <methods>
+                    <include name="verifyInvallidLogin"/>
                     <include name="verifyValidLogin"/>
                 </methods>
             </class>
+
         </classes>
     </test>
+
 </suite>
