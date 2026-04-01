@@ -2,6 +2,7 @@
 <suite name="Automation Test" parallel="false">
     <test name="Automation test">
         <classes>
+        <class name="TestPages.PracticeTestPage">
             <class name="TestPages.LoginTestPage">
                 <methods>
                     <include name="verifyValidLogin"/>
