@@ -33,6 +33,9 @@ public class BaseClass {
 	
 	public void initialize() {
 	   WebDriverManager.chromedriver().setup();
+	   ChromeOptions options = new ChromeOptions();
+	   options.addArguments("--headless=New");
+	   options.addArguments("--window-size=1920,1080");
        driver.set(new ChromeDriver());
        getDriver().get(baseUrl);
        getDriver().manage().window().maximize();
